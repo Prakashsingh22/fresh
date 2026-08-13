@@ -1,0 +1,452 @@
+.order-items-page {
+  min-height: 100vh;
+  background-color: #f3f3f3;
+  font-family: "Inter", sans-serif;
+}
+
+.main-content-padding {
+  padding-top: 20px;
+  /* Reduced since fixed header is removed */
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* REDUNDANT STICKY HEADER REMOVED */
+
+.order-header-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.order-logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* Back Button */
+.back-home-btn {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.back-home-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.back-icon {
+  font-size: 22px;
+}
+
+/* Header Text */
+.header-text h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #111827;
+}
+
+.header-text p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ================= TABLE WRAPPER ================= */
+/* ===============================
+   LOGO
+================================ */
+/* ================= LOGO + BRAND (CENTERED) ================= */
+.order-logo-table {
+  display: flex;
+  align-items: center;
+  /* logo & text vertically aligned */
+  justify-content: center;
+  /* center horizontally */
+  gap: 5px;
+  /* space between logo & text */
+  margin-bottom: 12px;
+
+}
+
+.order-logo-table img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.order-logo-table span {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 0.5px;
+}
+
+.order-table-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+/* Center Heading */
+.order-table-wrapper h1 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #111827;
+}
+
+/* BACK BUTTON */
+.oi-back-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.oi-back-btn:hover {
+  color: #16a34a;
+}
+
+/* Empty Cart */
+.empty-text {
+  text-align: center;
+  font-size: 18px;
+  padding: 40px;
+  color: #6b7280;
+}
+
+/* ================= TABLE ================= */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th {
+  background: #f9fafb;
+  padding: 14px;
+  font-size: 16px;
+  color: black;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.order-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 16px;
+  color: #111827;
+  text-align: center;
+}
+
+.order-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* ================= PRODUCT CELL ================= */
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-cell img {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+}
+
+.product-cell span {
+  font-weight: 500;
+}
+
+/* ================= QUANTITY CONTROLS ================= */
+.qty-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.qty-controls button {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.qty-controls button:hover {
+  background: #e5e7eb;
+}
+
+.qty-controls span {
+  min-width: 24px;
+  font-weight: 600;
+}
+
+/* ================= REMOVE BUTTON ================= */
+/* ================= REMOVE BUTTON ================= */
+.remove-btn {
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  min-width: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.4);
+  transform: translateY(-1px);
+}
+
+/* ================= FOOTER ================= */
+.order-footer {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.order-summary p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: #111827;
+}
+
+/* ================= PLACE ORDER BUTTON ================= */
+/* Works even if Button is custom */
+.order-footer button {
+  background: whitesmoke;
+  color: black;
+  border: 1px solid gray;
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.order-footer button:hover {
+  background: linear-gradient(135deg, lch(67.21% 79.05 143.95));
+  transform: translateY(-2px);
+
+  color: whitesmoke;
+}
+
+/* ================= PAYMENT SECTION ================= */
+.payment-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.payment-section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+/* Payment options layout */
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Payment card */
+.payment-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #ffffff;
+  transition: all 0.25s ease;
+}
+
+.payment-card:hover {
+  border-color: #22c55e;
+  background: #f0fdf4;
+}
+
+/* Active selection */
+.payment-card.active {
+  border: 2px solid #16a34a;
+  background: #ecfdf5;
+}
+
+/* Radio */
+.payment-card input {
+  width: 18px;
+  height: 18px;
+  accent-color: #16a34a;
+}
+
+/* Text */
+.payment-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.payment-card p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-card {
+    flex-direction: row;
+  }
+}
+
+/* ================= PAYMENT DETAILS ================= */
+.payment-details {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.payment-details label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.payment-details input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  transition: border 0.2s ease;
+}
+
+.payment-details input:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+/* Card row */
+.card-row {
+  display: flex;
+  gap: 12px;
+}
+
+.card-row input {
+  flex: 1;
+}
+
+
+/* ================= FOOTER ================= */
+.order-footer {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* allow wrap on small screens */
+  gap: 20px;
+}
+
+/* Footer summary row */
+.order-summary {
+  display: flex;
+  gap: 40px;
+  /* spacing between items */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.order-summary p {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: black;
+}
+
+/* Adjust on smaller screens */
+@media (max-width: 768px) {
+  .order-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .order-header-content {
+    flex-wrap: wrap;
+  }
+
+  .order-table-wrapper {
+    margin: 15px;
+    padding: 16px;
+  }
+
+  .order-footer {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .product-cell img {
+    width: 45px;
+    height: 45px;
+  }
+}

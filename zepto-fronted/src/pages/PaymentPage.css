@@ -1,0 +1,219 @@
+/* ===============================
+   PAYMENT PAGE WRAPPER
+================================ */
+.payment-page {
+  min-height: 100vh;
+  background-color: #f3f3f3;
+  font-family: "Inter", sans-serif;
+}
+
+.main-content-padding {
+  padding-top: 20px;
+  /* Reduced since fixed header is removed */
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* ===============================
+   PAYMENT CONTAINER
+================================ */
+.payment-container {
+  width: 90%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  position: relative;
+}
+
+/* ===============================
+   BACK BUTTON (LOCAL ONLY)
+================================ */
+.pp-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.pp-back-btn:hover {
+  background: rgba(46, 125, 50, 0.12);
+}
+
+/* ===============================
+   PAGE TITLE
+================================ */
+.payment-container h1 {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 24px;
+  color: #16a34a;
+  /* Parrot Green */
+}
+
+/* ===============================
+   SUMMARY SECTION
+================================ */
+.summary-section {
+  background: #f9fbe7;
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 26px;
+  border: 1px solid #dcedc8;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.amount {
+  color: #2e7d32;
+  font-weight: 800;
+}
+
+.address-preview {
+  font-size: 13px;
+  color: #546e7a;
+}
+
+/* ===============================
+   PAYMENT OPTIONS
+================================ */
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+/* ===============================
+   PAYMENT CARD
+================================ */
+.option-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1.5px solid #dcedc8;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* Hide real radio */
+.option-card input {
+  display: none;
+}
+
+/* Hover */
+.option-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* Selected */
+.option-card.selected {
+  background: linear-gradient(135deg, #f1f8e9, #ffffff);
+  border-color: #66bb6a;
+  box-shadow: 0 10px 28px rgba(102, 187, 106, 0.28);
+}
+
+/* Custom Radio */
+.option-card::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #9ccc65;
+  transition: all 0.2s ease;
+}
+
+.option-card.selected::before {
+  background: #43a047;
+  border-color: #43a047;
+}
+
+/* ===============================
+   PAYMENT CARD TEXT
+================================ */
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details .title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #263238;
+}
+
+.details .desc {
+  font-size: 13px;
+  color: #607d8b;
+}
+
+/* ===============================
+   PRIMARY PAY BUTTON
+================================ */
+.pp-primary-btn {
+  width: 100%;
+  height: 54px;
+  background: linear-gradient(135deg, #0cb60c, #0cb60c);
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 26px rgba(67, 160, 71, 0.35);
+}
+
+/* Hover */
+.pp-primary-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(67, 160, 71, 0.45);
+}
+
+/* Active */
+.pp-primary-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Disabled */
+.pp-primary-btn:disabled {
+  background: #c8e6c9;
+  color: #2e7d32;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 520px) {
+  .payment-container {
+    border-radius: 0;
+    min-height: 100vh;
+  }
+}

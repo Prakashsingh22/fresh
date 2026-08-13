@@ -1,0 +1,215 @@
+/* ===============================
+   ROOT SCOPE (CRITICAL)
+================================ */
+.login-page {
+  min-height: 100vh;
+  background: #f0fff4;
+  font-family: "Segoe UI", sans-serif;
+
+}
+
+/* REDUNDANT HEADER REMOVED */
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+.login-page .login-container {
+  margin-top: 120px;
+  display: flex;
+  gap: 20px;
+}
+
+/* ===============================
+   LEFT IMAGE
+================================ */
+.login-page .hero-single {
+  flex: 1;
+  position: relative;
+}
+
+.login-page .hero-full-image {
+  margin-top: 50px;
+  width: 98%;
+  height: 88%;
+  position: relative;
+}
+
+.login-page .hero-full-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================
+   IMAGE OVERLAY
+================================ */
+.login-page .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.65));
+  color: #ffffff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-page .badge {
+  background: orangered;
+  padding: 8px 14px;
+  border-radius: 999px;
+  width: fit-content;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-page .title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.login-page .highlight {
+  color: #84cc16;
+}
+
+.login-page .subtitle {
+  font-size: 16px;
+  max-width: 480px;
+  margin-bottom: 30px;
+  color: #e5e7eb;
+}
+
+/* ===============================
+   LOGIN CARD (RIGHT)
+================================ */
+.login-page .signup-card {
+  flex: 1;
+  max-width: 420px;
+  margin-right: 60px;
+  align-self: center;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   LOGO INSIDE CARD
+================================ */
+.login-page .signup-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.login-page .signup-logo img {
+  width: 60px;
+}
+
+/* ===============================
+   FORM (SCOPED)
+================================ */
+.login-page .signup-card label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.login-page .signup-card input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 2px solid #d1fae5;
+  font-size: 15px;
+}
+
+.login-page .signup-card input:focus {
+  border-color: #22c55e;
+  outline: none;
+}
+
+.login-page .password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-page .password-toggle-icon {
+  position: absolute;
+  right: 12px;
+  top: 55%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.login-page .password-toggle-icon:hover {
+  color: #22c55e;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.login-page .primary-btn {
+  width: 100%;
+  height: 52px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #22c55e, #84cc16);
+  color: #ffffff;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===============================
+   TEXT
+================================ */
+.login-page .footer-text,
+.login-page .terms-text {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.login-page .footer-text span,
+.login-page .terms-text span {
+  color: #22c55e;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===============================
+   ERROR
+================================ */
+.login-page .error {
+  color: #dc2626;
+  font-size: 12px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .login-page .hero-single {
+    display: none;
+  }
+
+  .login-page .login-container {
+    justify-content: center;
+  }
+
+  .login-page .signup-card {
+    margin: 0;
+  }
+}

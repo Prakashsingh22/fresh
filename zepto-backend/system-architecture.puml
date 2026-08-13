@@ -1,0 +1,79 @@
+@startuml
+
+skinparam defaultTextAlignment center
+skinparam componentStyle uml2
+
+package "Frontend Architecture" {
+  [React User Interface] as ReactUI
+  [Axios / Fetch API Client] as APIClient
+  
+  ReactUI --> APIClient : Triggers Action
+}
+
+package "Backend System (Spring Boot - Port 8080)" {
+  
+  [AuthFilter & JWT Security] as SecurityWrapper
+
+  package "Controllers (REST API Layer)" {
+    [ProductController]
+    [UserController]
+    [OrderController]
+    [WarehouseController]
+  }
+
+  package "Services (Business Logic Layer)" {
+    [ProductService]
+    [UserService]
+    [OrderService]
+    [WareHouseService]
+  }
+
+  package "Repositories (Data Access / Hibernate Layer)" {
+    [ProductRepository]
+    [UserRepository]
+    [OrderRepository]
+    [WareHouseRepository]
+  }
+
+  package "Models (JPA Database Entities)" {
+    [Product Entity]
+    [User Entity]
+    [Order Entity]
+    [WareHouse Entity]
+  }
+}
+
+database "MySQL Database Storage" {
+  [users table]
+  [products table]
+  [orders table]
+  [warehouses table]
+}
+
+APIClient --> SecurityWrapper : JSON HTTP Request + JWT Bearer Token
+SecurityWrapper --> ProductController : Validate Identity and Route
+SecurityWrapper --> UserController
+SecurityWrapper --> OrderController
+SecurityWrapper --> WarehouseController
+
+ProductController --> ProductService : Passes DTO Formatted Request
+OrderController --> OrderService
+UserController --> UserService
+WarehouseController --> WareHouseService
+
+ProductService --> ProductRepository : Encoded Business Rules Applied
+OrderService --> OrderRepository
+UserService --> UserRepository
+WareHouseService --> WareHouseRepository
+
+ProductRepository ..> [Product Entity] : ORM Entity Binding
+OrderRepository ..> [Order Entity]
+UserRepository ..> [User Entity]
+WareHouseRepository ..> [WareHouse Entity]
+
+[Product Entity] --> [products table] : JPA Sync
+[User Entity] --> [users table] : JPA Sync
+[Order Entity] --> [orders table] : JPA Sync
+[WareHouse Entity] --> [warehouses table] : JPA Sync
+
+@enduml

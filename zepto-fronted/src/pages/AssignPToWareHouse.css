@@ -1,0 +1,256 @@
+/* ===============================
+   ROOT SCOPE (ISOLATED)
+================================ */
+.assign-pto-ware-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fff4, #ffffff);
+  padding-top: 80px;
+  /* space for fixed header */
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+/* ===============================
+   FIXED HEADER (GLASS EFFECT)
+================================ */
+.assign-pto-ware-page .assign-pto-ware-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+
+  /* Parrot Green Gradient */
+  background: linear-gradient(90deg, #22c55e, #84cc16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
+   HEADER CONTENT
+================================ */
+.assign-pto-ware-page .assign-pto-ware-header-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+  padding-left: 32px;
+}
+
+/* ===============================
+   BACK BUTTON
+================================ */
+.assign-pto-ware-page .assign-pto-ware-back-btn {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.25s ease,
+    border-radius 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.assign-pto-ware-page .assign-pto-ware-back-btn:hover {
+  background: white;
+  color: #16a34a;
+  transform: scale(1.1);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  border-color: white;
+}
+
+.assign-pto-ware-page .assign-pto-ware-back-btn:active {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   HEADER TEXT
+================================ */
+.assign-pto-ware-page .assign-pto-ware-header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.assign-pto-ware-page .assign-pto-ware-header-text h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.assign-pto-ware-page .assign-pto-ware-header-text p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===============================
+   FORM LAYOUT
+================================ */
+.assign-pto-ware-page .assign-pto-ware-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* ===============================
+   CARD
+================================ */
+.assign-pto-ware-page .assign-pto-ware-card {
+  width: 520px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* ===============================
+   SECTION TITLE
+================================ */
+.assign-pto-ware-page .assign-pto-ware-card h2 {
+  margin: 20px 0 10px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* ===============================
+   GRID
+================================ */
+.assign-pto-ware-page .assign-pto-ware-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.assign-pto-ware-page .assign-pto-ware-full {
+  grid-column: span 2;
+}
+
+/* ===============================
+   INPUTS & SELECTS (SCOPED)
+================================ */
+.assign-pto-ware-page label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.assign-pto-ware-page input,
+.assign-pto-ware-page select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #22c55e;
+  font-size: 13px;
+}
+
+.assign-pto-ware-page input:focus,
+.assign-pto-ware-page select:focus {
+  border-color: #22c55e;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.15);
+}
+
+/* ===============================
+   ACTION BUTTON
+================================ */
+.assign-pto-ware-page .assign-pto-ware-actions {
+  margin-top: 28px;
+}
+
+.assign-pto-ware-page .assign-pto-ware-submit {
+  width: 100%;
+  height: 48px;
+
+  background: linear-gradient(90deg, #08be4b, #96eb17);
+  color: #ffffff;
+
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 900;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.assign-pto-ware-page .assign-pto-ware-submit:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(34, 197, 94, 0.35);
+  filter: brightness(1.05);
+}
+
+.assign-pto-ware-page .assign-pto-ware-submit:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 6px 16px rgba(34, 197, 94, 0.25);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .assign-pto-ware-page {
+    padding-top: 72px;
+  }
+
+  .assign-pto-ware-page .assign-pto-ware-header {
+    height: 72px;
+  }
+
+  .assign-pto-ware-page .assign-pto-ware-header-content {
+    padding-left: 16px;
+    gap: 12px;
+  }
+
+  .assign-pto-ware-page .assign-pto-ware-back-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .assign-pto-ware-page .assign-pto-ware-header-text h1 {
+    font-size: 18px;
+  }
+
+  .assign-pto-ware-page .assign-pto-ware-card {
+    width: calc(100% - 32px);
+  }
+
+  .assign-pto-ware-page .assign-pto-ware-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .assign-pto-ware-page .assign-pto-ware-full {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,199 @@
+/* ================= ROOT ================= */
+.account-settings-page {
+  min-height: 100vh;
+  background-color: #f3f3f3;
+  font-family: "Inter", sans-serif;
+}
+
+.main-content-padding {
+  padding-top: 120px;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.account-settings-container {
+  width: 90%;
+  max-width: 800px;
+}
+
+/* REDUNDANT HEADER REMOVED */
+
+.account-settings-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ================= BACK BUTTON ================= */
+.account-settings-back-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ================= LOCAL HEADER ================= */
+.account-settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.account-settings-header-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #16a34a;
+  /* Parrot Green */
+}
+
+/* ================= USER MENU ================= */
+.account-settings-user {
+  position: relative;
+}
+
+.account-settings-user-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.account-settings-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22c55e, #84cc16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* ================= DROPDOWN ================= */
+.account-settings-dropdown {
+  position: absolute;
+  right: 0;
+  top: 54px;
+  width: 240px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.account-settings-dropdown-header {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.account-settings-dropdown-header span {
+  display: block;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.account-settings-dropdown-header .role {
+  color: #22c55e;
+  font-weight: 700;
+}
+
+.account-settings-dropdown-item {
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.account-settings-dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.account-settings-dropdown-item.logout {
+  color: red;
+}
+
+/* ================= CONTENT ================= */
+.account-settings-content {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* ================= CARD ================= */
+.account-settings-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.account-settings-card h2 {
+  font-size: 1.1rem;
+  color: #16a34a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 0.75rem;
+}
+
+/* ================= PROFILE ================= */
+.account-settings-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+
+}
+
+
+.profile-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22c55e, #84cc16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  border: 1px solid grey;
+}
+
+.profile-role {
+  display: inline-block;
+  background: #dcfce7;
+  color: #16a34a;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+/* ================= GRID ================= */
+.account-settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.account-settings-grid span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.account-settings-grid strong {
+  display: block;
+  font-size: 15px;
+}
