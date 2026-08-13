@@ -1,0 +1,320 @@
+.invoice-wrapper:not(.preview-mode) {
+    display: none;
+}
+
+.invoice-container.flipkart-style {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 0;
+    color: #212121;
+    background-color: white;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+}
+
+/* BANNER */
+.invoice-banner {
+    background-color: #16a34a;
+    /* Parrot Green */
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-title {
+    font-size: 32px;
+    margin: 0;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: -1px;
+}
+
+.banner-text {
+    text-align: right;
+}
+
+.banner-text h2 {
+    font-size: 20px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.banner-text p {
+    margin: 4px 0 0;
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+/* ADDRESS SECTION */
+.address-section {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #16a34a;
+    padding: 30px 40px;
+}
+
+.address-block {
+    flex: 1;
+}
+
+.section-label {
+    font-size: 12px;
+    color: #757575;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.entity-name {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 5px !important;
+}
+
+.address-content p {
+    margin: 2px 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* META INFO */
+.order-meta-info {
+    display: flex;
+    padding: 20px 40px;
+    background-color: #f0f9f0;
+    /* Light Green Tint */
+    gap: 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.meta-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-label {
+    font-size: 11px;
+    color: #757575;
+    text-transform: uppercase;
+}
+
+.meta-value {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* TABLE */
+.invoice-items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.invoice-items-table th {
+    background-color: #16a34a;
+    /* Parrot Green */
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.invoice-items-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    vertical-align: top;
+}
+
+.item-name {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.grand-total-row td {
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #f9f9f9;
+}
+
+.total-value {
+    color: #16a34a;
+    font-size: 18px !important;
+}
+
+/* FOOTER */
+.invoice-footer-section {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-notes {
+    flex: 2;
+}
+
+.footer-notes p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.declaration {
+    margin-top: 15px !important;
+    font-style: italic;
+    color: #666;
+}
+
+.signature-box {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.signature-box p {
+    font-size: 12px;
+}
+
+.sign-space {
+    height: 60px;
+    width: 200px;
+    border-bottom: 1px dashed #ccc;
+    margin: 10px 0;
+}
+
+.signatory-label {
+    font-weight: 600;
+}
+
+/* PREVIEW UI */
+.invoice-wrapper.preview-mode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px 0;
+}
+
+.preview-actions {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: #212121;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    z-index: 100;
+}
+
+.preview-print-btn,
+.preview-close-btn {
+    padding: 10px 25px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.preview-print-btn {
+    background: #16a34a;
+    /* Matches the bill theme */
+    color: white;
+}
+
+.preview-close-btn {
+    background: #f0f0f0;
+    color: #212121;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
+    /* Hide global layout elements */
+    header,
+    footer,
+    .amazon-footer,
+    .admin-orders-page-header,
+    .warehouse-header,
+    .preview-actions {
+        display: none !important;
+    }
+
+    /* Hide page-specific content while keeping the container (which holds the Invoice) */
+    .od-header,
+    .od-back-btn,
+    .status-timeline-container,
+    .od-content-grid,
+    .admin-orders-controls,
+    .orders-table-container {
+        display: none !important;
+    }
+
+    /* Remove padding/backgrounds that might interfere */
+    .main-content-padding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .order-details-page,
+    .admin-orders-page {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: auto !important;
+    }
+
+    .invoice-wrapper {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        background: white !important;
+        z-index: 9999;
+    }
+
+    .invoice-container.flipkart-style {
+        display: block !important;
+        width: 210mm;
+        margin: 10mm auto;
+        padding: 0;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Force background colors and images to print */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body {
+        background-color: white !important;
+        overflow: visible !important;
+    }
+}

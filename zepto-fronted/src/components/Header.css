@@ -1,0 +1,568 @@
+/* ===============================
+   AMAZON HEADER STYLES
+================================ */
+.amazon-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP BAR (NAV BELT) */
+.nav-belt {
+    background-color: #16a34a;
+    /* Parrot Green Shade */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 10px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo {
+    cursor: pointer;
+    padding: 1px 8px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: flex;
+    align-items: baseline;
+}
+
+.nav-logo:hover {
+    border-color: white;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+    font-style: italic;
+}
+
+.logo-dot {
+    font-size: 14px;
+    color: #ffeb3b;
+    /* Yellow dot for contrast */
+}
+
+
+.nav-location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-location:hover {
+    border-color: white;
+}
+
+.nav-location-icon {
+    font-size: 18px;
+}
+
+.nav-location-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-location-text .line-1 {
+    font-size: 11px;
+    color: #ccc;
+}
+
+.nav-location-text .line-2 {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* SEARCH BAR */
+.nav-fill {
+    flex: 1;
+}
+
+.nav-search-bar {
+    display: flex;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #16a34a;
+    /* Matches header green */
+    width: 100%;
+}
+
+.nav-search-bar:focus-within {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ff9900;
+    /* Amazon-style focus ring */
+}
+
+.nav-search-scope {
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+}
+
+.nav-search-scope select {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    outline: none;
+    border-right: 1px solid #ddd;
+}
+
+.nav-input {
+    flex: 1;
+    border: none;
+    padding: 0 12px;
+    font-size: 15px;
+    color: #111;
+    background-color: white;
+    margin: 0;
+}
+
+.nav-input:focus {
+    outline: none;
+}
+
+.nav-search-submit {
+    width: 45px;
+    background-color: #febd69;
+    /* Traditional Amazon Orange */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    border: none;
+    transition: background-color 0.1s;
+}
+
+.nav-search-submit:hover {
+    background-color: #f3a847;
+}
+
+/* RIGHT SECTION */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.nav-right>div {
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-right>div:hover {
+    border-color: white;
+}
+
+.nav-language {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lang-code {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ===============================
+   LANGUAGE DROPDOWN
+================================ */
+.nav-language {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px !important;
+}
+
+.nav-lang-trigger {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    min-width: 240px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+    border-radius: 4px;
+    padding: 15px 0;
+    margin-top: 1px;
+}
+
+.nav-language:hover .nav-lang-dropdown {
+    display: flex;
+}
+
+.lang-dropdown-header {
+    padding: 0 15px 10px;
+    font-size: 13px;
+    color: #444;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.lang-dropdown-header a {
+    color: #007185;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.lang-options {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.lang-option:hover {
+    background-color: #f3f3f3;
+    color: #c45500;
+}
+
+.lang-option input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #f08804;
+}
+
+.lang-text {
+    font-size: 14px;
+    color: #111;
+}
+
+.lang-dropdown-footer {
+    margin-top: 10px;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    font-size: 13px;
+}
+
+.shopping-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.country-link {
+    color: #007185;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.country-link:hover {
+    text-decoration: underline;
+    color: #c45500;
+}
+
+.nav-line-1 {
+    font-size: 11px;
+}
+
+.nav-line-2 {
+    font-size: 13px;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-account-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    color: black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+.nav-account:hover .nav-account-dropdown {
+    display: flex;
+}
+
+.nav-account-dropdown button {
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 13px;
+    width: 100%;
+}
+
+.nav-account-dropdown button:hover {
+    background-color: #f3f3f3;
+}
+
+.nav-account-dropdown .logout-btn {
+    color: #b12704;
+    border-top: 1px solid #eee;
+}
+
+.nav-cart {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.nav-cart-count-container {
+    position: relative;
+}
+
+.nav-cart-count {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f08804;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.nav-cart-text {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+/* SUB-NAVIGATION (NAV MAIN) */
+.nav-main {
+    background-color: #15803d;
+    /* Darker Parrot Green */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.nav-main-all {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.nav-main-all:hover {
+    border-color: white;
+}
+
+.nav-main-links {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-main-links span {
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.nav-main-links span:hover {
+    border-color: white;
+}
+
+/* ===============================
+   NAVIGATION DROPDOWN
+================================ */
+.nav-item-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-trigger {
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.nav-item-dropdown:hover .dropdown-trigger {
+    border-color: white;
+}
+
+.nav-item-dropdown .dropdown-menu {
+    position: absolute;
+    top: 38px;
+    /* Slightly higher to bridge any gap with 40px nav-main */
+    left: 0;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+    border-radius: 4px;
+}
+
+.nav-item-dropdown:hover .dropdown-menu,
+.nav-item-dropdown .dropdown-menu.show {
+    display: flex;
+}
+
+.nav-item-dropdown .dropdown-menu button {
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: #111;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.nav-item-dropdown .dropdown-menu button:hover {
+    /* Parrot Green text on hover */
+}
+
+/* ===============================
+   RESPONSIVE (MEDIA QUERIES)
+================================ */
+
+/* Tablet & Mobile (Keep header usable) */
+@media (max-width: 900px) {
+    .nav-belt {
+        height: 60px !important;
+        flex-wrap: nowrap !important;
+        padding: 0 8px !important;
+        gap: 8px !important;
+    }
+
+    .nav-left {
+        order: 1 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Row 1 Middle: Search Bar */
+    .nav-fill {
+        order: 2 !important;
+        flex: 1 !important;
+        width: auto !important;
+        margin: 0 5px !important;
+        display: block !important;
+    }
+
+    .nav-search-bar {
+        height: 34px !important;
+    }
+
+    .nav-search-scope {
+        display: none !important;
+        /* Always hide scope on smaller screens */
+    }
+
+    /* Row 1 Right: Account & Cart */
+    .nav-right {
+        order: 3 !important;
+        display: flex !important;
+        gap: 0 !important;
+        margin-left: auto !important;
+    }
+
+    .nav-location,
+    .nav-language,
+    .nav-orders,
+    .nav-cart-text,
+    .nav-account .nav-line-1 {
+        display: none !important;
+    }
+
+    .nav-right>div {
+        padding: 5px !important;
+    }
+
+    /* Sub-nav horizontal scroll */
+    .nav-main {
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        scrollbar-width: none !important;
+    }
+
+    .nav-main::-webkit-scrollbar {
+        display: none !important;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 18px !important;
+    }
+
+    .nav-search-scope {
+        display: none !important;
+        /* Hide dropdown in search bar to save space */
+    }
+
+    .nav-search-bar {
+        border-radius: 4px !important;
+    }
+
+    .nav-input {
+        border-radius: 4px 0 0 4px !important;
+    }
+
+    /* Adjust right section icons spacing */
+    .nav-right>div {
+        padding: 5px !important;
+    }
+
+    /* Reduce sidebar width even more */
+    .sidebar {
+        width: 80% !important;
+    }
+}

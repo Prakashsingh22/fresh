@@ -1,0 +1,60 @@
+.science-container {
+    padding: 20px;
+    padding-top: 120px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.science-hero {
+    text-align: center;
+    background: #000;
+    color: #00ffcc;
+    /* Sci-fi green */
+    padding: 100px 20px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.science-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    z-index: 1;
+    position: relative;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.tech-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #00ffcc;
+}
+
+.tech-card h3 {
+    font-size: 1.8rem;
+    color: #232f3e;
+    margin-bottom: 20px;
+}
+
+.tech-card p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.science-footer {
+    margin-top: 80px;
+    text-align: center;
+    padding: 60px;
+    background: #f0f2f2;
+    border-radius: 20px;
+}

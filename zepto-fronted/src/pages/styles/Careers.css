@@ -1,0 +1,113 @@
+.careers-container {
+    padding: 20px;
+    padding-top: 120px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.careers-hero {
+    text-align: center;
+    background: linear-gradient(135deg, #007185 0%, #004d5c 100%);
+    color: white;
+    padding: 80px 20px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+}
+
+.careers-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.job-section {
+    margin-bottom: 60px;
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.job-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.job-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: #007185;
+}
+
+.job-card h3 {
+    color: #232f3e;
+    margin-bottom: 10px;
+}
+
+.job-tag {
+    display: inline-block;
+    background: #e7f3f5;
+    color: #007185;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.culture-section {
+    background: #f8f9fa;
+    padding: 60px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.benefit-card h4 {
+    color: #007185;
+    margin-bottom: 10px;
+}
+
+.apply-section {
+    text-align: center;
+    padding: 60px;
+    background: #232f3e;
+    color: white;
+    border-radius: 20px;
+}
+
+.apply-btn {
+    background: #febd69;
+    color: #232f3e;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .careers-hero {
+        padding: 40px 20px;
+    }
+}

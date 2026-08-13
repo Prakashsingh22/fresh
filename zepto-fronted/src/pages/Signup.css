@@ -1,0 +1,406 @@
+/* ===============================
+   PAGE BACKGROUND
+================================ */
+.signup-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fff4, #ffffff);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("/public/index2.png");
+}
+
+/* REDUNDANT HEADER REMOVED */
+
+/* ===============================
+   SIGNUP WRAPPER
+================================ */
+.signup-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 140px;
+  /* space for fixed header */
+}
+
+/* ===============================
+   SIGNUP LOGO
+================================ */
+.signup-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.signup-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.signup-logo span {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.signup-logo:hover span {
+  color: #22c55e;
+}
+
+/* ===============================
+   SIGNUP CARD (TRANSPARENT GLASS)
+================================ */
+.signup-card {
+  width: 540px;
+
+  /* 🔥 Glass effect */
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  padding: 32px;
+  border-radius: 18px;
+
+  /* subtle glass border */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  /* softer shadow for glass */
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+
+/* ===============================
+   STEP INDICATORS
+================================ */
+.steps-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+
+}
+
+.signup-title {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: green;
+}
+
+.steps-container {
+  display: flex;
+  align-items: flex-start;
+  width: 210px;
+}
+
+.step-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  background: #e5e7eb;
+  color: #374151;
+  transition: all 0.3s ease;
+}
+
+.step.active,
+.step.done {
+  background: linear-gradient(135deg, #22c55e, #84cc16);
+  color: white;
+}
+
+.step-label {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-align: center;
+}
+
+.step-label.active-label {
+  background: linear-gradient(90deg, #22c55e, #84cc16);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Connecting line */
+.line-wrapper {
+  position: relative;
+  width: 80px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.line-background {
+  width: 100%;
+  height: 5px;
+  background: #e5e7eb;
+  border-radius: 3px;
+}
+
+.line-fill {
+  position: absolute;
+  height: 5px;
+  background: linear-gradient(135deg, #84cc16, #22c55e);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* ===============================
+   FORM INPUTS
+================================ */
+label {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 2px solid #d1fae5;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: #22c55e;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 12px;
+  top: 45%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.password-toggle-icon:hover {
+  color: #22c55e;
+}
+
+/* ===============================
+   ACTION BUTTONS
+================================ */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  width: 100%;
+
+}
+
+/* FORCE IDENTICAL BUTTON SIZE */
+.primary-btn,
+.back-btn {
+  width: 100%;
+  height: 52px;
+  /* 🔑 same height */
+  padding: 0;
+  /* 🔑 remove padding difference */
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  /* 🔑 important */
+  display: flex;
+  /* 🔑 centers text exactly */
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* PRIMARY */
+.primary-btn {
+  background: linear-gradient(135deg, #22c55e, #84cc16);
+  color: #fff;
+}
+
+/* BACK */
+.back-btn {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* SAME HOVER EFFECT (NO SIZE SHIFT) */
+.primary-btn:hover,
+.back-btn:hover {
+  background: linear-gradient(135deg, #facc15, #22c55e);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.4);
+  transform: translateY(-2px);
+}
+
+
+/* ===============================
+   FOOTER TEXT
+================================ */
+.footer-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.footer-text span {
+  color: #22c55e;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footer-text span:hover {
+  text-decoration: underline;
+}
+
+.terms-text {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+
+  justify-content: center;
+}
+
+.terms-text span {
+  color: #22c55e;
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.terms-text span:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   PRIMARY TOGGLE
+================================ */
+.consumer-primary-toggle {
+  padding: 20px 24px;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.toggle-container input {
+  display: none;
+}
+
+.toggle-switch {
+  width: 42px;
+  height: 22px;
+  background: #d1fae5;
+  border-radius: 999px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.toggle-container input:checked+.toggle-switch {
+  background: linear-gradient(90deg, #22c55e, #a3e635);
+}
+
+.toggle-container input:checked+.toggle-switch::after {
+  transform: translateX(20px);
+}
+
+.toggle-text {
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+}
+
+.toggle-hint {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 6px;
+
+}
+
+/* ===============================
+   ERROR MESSAGES
+================================ */
+.error {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 480px) {
+  .signup-card {
+    width: 95%;
+    padding: 24px;
+  }
+
+  .steps-container {
+    width: 160px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}

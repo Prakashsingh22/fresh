@@ -1,0 +1,294 @@
+.admin-orders-page {
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    font-family: "Inter", sans-serif;
+    padding-top: 80px;
+    /* Space for fixed header */
+}
+
+/* ===============================
+   FIXED HEADER (GREEN GRADIENT)
+================================ */
+.admin-orders-page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: #16a34a;
+    /* Parrot Green */
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-section img {
+    height: 40px;
+}
+
+.back-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.back-btn:hover {
+    background: white;
+    color: #16a34a;
+    transform: scale(1.05);
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.main-content-padding {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.admin-orders-container {
+    width: 95%;
+    max-width: 1200px;
+}
+
+/* ===============================
+   CONTROLS (SEARCH)
+================================ */
+.admin-orders-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+.search-box input {
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    /* Modern pill search */
+    width: 350px;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+/* ===============================
+   TABLE CONTAINER
+================================ */
+.orders-table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Premium shadow */
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.orders-table th {
+    background-color: #f9fafb;
+    padding: 1.25rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: #4b5563;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #f3f4f6;
+}
+
+.orders-table td {
+    padding: 1.25rem 1rem;
+    font-size: 0.95rem;
+    color: #111827;
+    border-bottom: 1px solid #f3f4f6;
+    vertical-align: middle;
+}
+
+.orders-table tr:last-child td {
+    border-bottom: none;
+}
+
+.orders-table tr:hover {
+    background-color: #fdfdfd;
+}
+
+/* ===============================
+   STATUS BADGES
+================================ */
+.status-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-badge.placed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.packed {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.status-badge.dispatched {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.status-badge.delivered {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.status-badge.cancelled {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-badge.returned {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+/* ===============================
+   ACTIONS
+================================ */
+.action-btn {
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.action-btn.view {
+    background-color: #f0f0f0;
+    color: #212121;
+    border: 1px solid #e0e0e0;
+}
+
+.action-btn.view:hover {
+    background-color: #e0e0e0;
+}
+
+.action-btn.print {
+    background-color: #fb641b;
+    /* Flipkart Orange */
+    color: white;
+}
+
+.action-btn.print:hover {
+    background-color: #e65a16;
+}
+
+.action-btn.mark {
+    background-color: #16a34a;
+    color: white;
+}
+
+.action-btn.mark.packed {
+    background-color: #854d0e;
+}
+
+.action-btn.mark.dispatched {
+    background-color: #1e40af;
+}
+
+.action-btn.mark.delivered {
+    background-color: #16a34a;
+}
+
+.action-btn.mark:hover {
+    filter: brightness(0.9);
+}
+
+.completed-text {
+    color: #16a34a;
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.completed-text::before {
+    content: "✓";
+}
+
+.cancelled-text {
+    color: #ef4444;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+/* ===============================
+   LOADING / EMPTY
+================================ */
+.loading {
+    text-align: center;
+    padding: 4rem;
+    color: #6b7280;
+    font-size: 1.125rem;
+}
+
+.no-data {
+    text-align: center;
+    padding: 4rem;
+    color: #9ca3af;
+    font-style: italic;
+}
